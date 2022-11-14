@@ -107,7 +107,7 @@ describe('demoapp', function() {
 
     element.all(by.xpath('//button[@title="Place Order"]')).click();
 
-    browser.sleep(3500);
+    browser.sleep(6000);
 
     element.all(by.xpath("(//span[contains(text(),'Create an Account')])[1]")).click();
 
