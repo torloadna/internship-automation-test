@@ -106,11 +106,8 @@ describe('demoapp', function() {
     checkout.fillstreet("Braće Fejića");
     checkout.fillcity("Boston");
     checkout.fillstate("Massachusetts");
-    //element.all(by.name("country_id")).click();
     checkout.postcode("02108");
-    //element.all(by.name('//*[@id="U148VAI"]/option[29]')).click();
     checkout.telephone("062002501");
-    //browser.sleep(6000);
     checkout.clickshippingmethod();
     checkout.clicknext();
 
