@@ -1,19 +1,19 @@
-let homepage = require('../pages/homepage');
-let newyoga = require('../pages/newyoga');
-let items = require('../pages/items');
-let helenahoodedfleece = require('../pages/helenahoodedfleece');
-let sale = require('../pages/sale');
-let teesonsale = require('../pages/teesonsale');
-let karissavnecktee = require('../pages/karissavnecktee');
-let elisaevercooltee = require('../pages/elisaevercooltee');
-let comparingoroducts = require('../pages/comparingproducts');
-let bags = require('../pages/bags');
-let overnightdufflebag = require('../pages/overnightdufflebag');
-let search = require ('../pages/search');
-let checkout = require ('../pages/checkout');
-let placeorder=require('../pages/placeorder');
-let createaccount1 = require('../pages/createaccount1');
-let createaccount2 = require('../pages/createaccount2');
+let homepage = require('../pageobjects/homepage');
+let newyoga = require('../pageobjects/newyoga');
+let items = require('../pageobjects/items');
+let helenahoodedfleece = require('../pageobjects/helenahoodedfleece');
+let sale = require('../pageobjects/sale');
+let teesonsale = require('../pageobjects/teesonsale');
+let karissavnecktee = require('../pageobjects/karissavnecktee');
+let elisaevercooltee = require('../pageobjects/elisaevercooltee');
+let comparingoroducts = require('../pageobjects/comparingproducts');
+let bags = require('../pageobjects/bags');
+let overnightdufflebag = require('../pageobjects/overnightdufflebag');
+let search = require ('../pageobjects/search');
+let checkout = require ('../pageobjects/checkout');
+let placeorder=require('../pageobjects/placeorder');
+let createaccount1 = require('../pageobjects/createaccount1');
+let createaccount2 = require('../pageobjects/createaccount2');
 
 
 describe('demoapp', function() {
