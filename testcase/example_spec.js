@@ -45,6 +45,7 @@ describe('demoapp', function() {
           }
 
   it('smoke test1', function() {
+    expect(browser.getTitle()).toBe("Home Page - Magento eCommerce - website to practice selenium | demo website for automation testing | selenium practice sites | selenium demo sites | best website to practice selenium automation | automation practice sites Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites")
     homepage.clickNewYogaButton();
     newyoga.clicknextbutton(); //go to next page
     items.clickhelena();
@@ -125,7 +126,6 @@ describe('demoapp', function() {
     createaccount2.insertpasswordconf("AdnaTorlo123!");
     createaccount2.clicksubmit();
 
-  
 
   });
 
