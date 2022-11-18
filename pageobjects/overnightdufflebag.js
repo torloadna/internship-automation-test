@@ -1,15 +1,12 @@
-let overnightdufflebag=function(){
-    
-    let addtocart=element.all(by.id("product-addtocart-button"));
-    let search=element.all(by.id("search"));
+let overnightDuffleBag = function(){
+    let addToCart = element.all(by.id("product-addtocart-button"));
+    let search = element.all(by.id("search"));
 
-    this.clickaddtocart=function(){
-        addtocart.click();
+    this.clickAddToCart = function(){
+        addToCart.click();
     }
-    this.searchgirl=function(name){
+    this.searchGirl = function(name){
         search.sendKeys(name);
     }
-
 }
-
-module.exports = new overnightdufflebag();
+module.exports = new overnightDuffleBag();

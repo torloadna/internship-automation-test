@@ -1,20 +1,16 @@
-let createaccount2=function(){
+let createAccount2 = function(){
+    let password = element.all(by.id("password"));
+    let passwordConfirmation = element.all(by.id("password-confirmation"));
+    let buttonSubmit = element.all(by.className("action submit primary"));
     
-    
-    let password=element.all(by.id("password"));
-    let passwordconfirmation=element.all(by.id("password-confirmation"));
-    let buttonsubmit=element.all(by.className("action submit primary"));
-    
-    this.insertpassword=function(name){
+    this.insertPassword = function(name){
         password.sendKeys(name);
     }
-    this.insertpasswordconf=function(name){
-        passwordconfirmation.sendKeys(name);
+    this.insertPasswordConf = function(name){
+        passwordConfirmation.sendKeys(name);
     }
-    this.clicksubmit=function(){
-        buttonsubmit.click();
+    this.clickSubmit = function(){
+        buttonSubmit.click();
     }
-
 }
-
-module.exports = new createaccount2();
+module.exports = new createAccount2();

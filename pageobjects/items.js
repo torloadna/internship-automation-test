@@ -1,12 +1,8 @@
-let items=function(){
-    let helenahoodedfleece=element.all(by.partialLinkText("Helena Hooded Flee"));
+let items = function(){
+    let helenaHoodedFleece = element.all(by.partialLinkText("Helena Hooded Flee"));
 
-
-    this.clickhelena=function(){
-        helenahoodedfleece.click();
+    this.clickHelena = function(){
+        helenaHoodedFleece.click();
     }
-
-
 }
-
 module.exports = new items();

@@ -1,12 +1,8 @@
-let createaccount1=function(){
+let createAccount1 = function(){
+    let createAccountButton = element.all(by.xpath("(//span[contains(text(),'Create an Account')])[1]"));
     
-    let createaccountbutton=element.all(by.xpath("(//span[contains(text(),'Create an Account')])[1]"));
-    
-    this.clickcreateaccount=function(){
-        createaccountbutton.click();
+    this.clickCreateAccount = function(){
+        createAccountButton.click();
     }
-    
-
 }
-
-module.exports = new createaccount1();
+module.exports = new createAccount1();

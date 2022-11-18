@@ -1,11 +1,8 @@
-let karissavnecktee=function(){
+let karissaVNeckTee = function(){
+    let addToCompare = element.all(by.xpath("//span[contains(text(),'Add to Compare')]"));
     
-    let addtocompare=element.all(by.xpath("//span[contains(text(),'Add to Compare')]"));
-    
-    this.addtocomparebutton=function(){
-        addtocompare.click();
+    this.addToCompareButton = function(){
+        addToCompare.click();
     }
-
 }
-
-module.exports = new karissavnecktee();
+module.exports = new karissaVNeckTee();

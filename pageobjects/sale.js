@@ -1,12 +1,8 @@
-let sale=function(){
-    
-    let teesonsale=element.all(by.xpath("//span[contains(text(),'Tees on sale')]"));
+let sale = function(){
+    let teesOnSale = element.all(by.xpath("//span[contains(text(),'Tees on sale')]"));
 
-    this.clickteesonsale=function(){
-        teesonsale.click();
+    this.clickTeesOnSale = function(){
+        teesOnSale.click();
     }
-
-
 }
-
 module.exports = new sale();

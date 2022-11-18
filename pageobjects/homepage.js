@@ -1,16 +1,11 @@
-let homepage=function(){
-    let shopNewYogaButton=element.all(by.className("action more button"));
+let homepage = function(){
+    let shopNewYogaButton = element.all(by.className("action more button"));
 
-
-    this.get=function(url){
+    this.get = function(url){
         browser.get(url);
     }
-
-    this.clickNewYogaButton=function(){
+    this.clickNewYogaButton = function(){
         shopNewYogaButton.click();
     }
-
-
 }
-
 module.exports = new homepage();

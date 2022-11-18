@@ -1,14 +1,8 @@
-let placeorder=function(){
+let placeOrder = function(){
+    let placeOrderButton = element.all(by.xpath('//button[@title="Place Order"]'));
     
-    let placeorderbutton=element.all(by.xpath('//button[@title="Place Order"]'));
-    
-    this.clickplaceorder=function(){
-        placeorderbutton.click();
+    this.clickPlaceOrder = function(){
+        placeOrderButton.click();
     }
-    
-
-
-
 }
-
-module.exports = new placeorder();
+module.exports = new placeOrder();
