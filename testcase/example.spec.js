@@ -53,6 +53,7 @@ describe('demoapp', function() {
 
     browser.sleep(2000);
 
+    expect(browser.getTitle()).toBe("Helena Hooded Fleece Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
     helenaHoodedFleece.chooseSize();
     helenaHoodedFleece.chooseColor();
     helenaHoodedFleece.clickAddToCart();
@@ -60,21 +61,27 @@ describe('demoapp', function() {
     browser.sleep(3000);
 
     helenaHoodedFleece.clickNavBarSale();
+    expect(browser.getTitle()).toBe("Sale Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
     sale.clickTeesOnSale();
+    expect(browser.getTitle()).toBe("Tees - Tops - Women Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
     teesOnSale.clickOnKarissa();
+    expect(browser.getTitle()).toBe("Karissa V-Neck Tee Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
     karissaVNeckTee.addToCompareButton();
     browser.navigate().back();
     browser.navigate().back();
     teesOnSale.clickOnElisa();
+    expect(browser.getTitle()).toBe("Elisa EverCool™ Tee Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
     elisaEvercoolTee.addToCompareButton();
 
     browser.sleep(2500);
 
     elisaEvercoolTee.clickCompareProducts();
+    expect(browser.getTitle()).toBe("Products Comparison List - Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
     comparingProducts.addToCartButton();
 
     browser.sleep(4000);
 
+    expect(browser.getTitle()).toBe("Elisa EverCool™ Tee Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
     elisaEvercoolTee.chooseSize();
     elisaEvercoolTee.chooseColor();
     elisaEvercoolTee.chooseQty();
@@ -83,13 +90,17 @@ describe('demoapp', function() {
     browser.sleep(1500);
 
     elisaEvercoolTee.goToBags();
+    expect(browser.getTitle()).toBe("Bags - Gear Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
     bags.clickReview();
+    expect(browser.getTitle()).toBe("Overnight Duffle Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
     overnightDuffleBag.clickAddToCart();
 
     browser.sleep(2000);
 
     overnightDuffleBag.searchGirl("Girl");
     browser.actions().sendKeys(protractor.Key.ENTER).perform();
+
+    expect((element.all(by.xpath('//div[@class="message notice"]'))).getText()).toBe("Your search returned no results. ");
 
     browser.sleep(2000);
 
@@ -99,8 +110,10 @@ describe('demoapp', function() {
 
     search.clickOnCheckout();
 
-    browser.sleep(4000);
+    browser.sleep(8000);
 
+    expect(browser.getTitle()).toBe("Checkout Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
+    expect((element.all(by.xpath('//span[@data-bind="text: getCartSummaryItemsCount()"]'))).getText()).toBe("5");
     checkout.fillEmail("adna.torlo@"+getRandomString(5)+".ba");
     checkout.fillFirstName("Adna");
     checkout.fillLastName("Torlo");
@@ -115,10 +128,12 @@ describe('demoapp', function() {
 
     browser.sleep(3000);
     
+    expect(browser.getTitle()).toBe("Checkout Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
     placeOrder.clickPlaceOrder();
 
     browser.sleep(6000);
 
+    expect(browser.getTitle()).toBe("Success Page Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
     createAccount1.clickCreateAccount();
 
     browser.sleep(2000);
