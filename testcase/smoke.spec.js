@@ -48,7 +48,7 @@ describe('demoapp', function() {
     expect(browser.getTitle()).toBe("Home Page - Magento eCommerce - website to practice selenium | demo website for automation testing | selenium practice sites | selenium demo sites | best website to practice selenium automation | automation practice sites Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
     homepage.clickNewYogaButton();
     expect(browser.getTitle()).toBe("New Luma Yoga Collection Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
-    newYoga.clickNextButton(); //go to next page
+    newYoga.clickNextButton(); 
     items.clickHelena();
 
     browser.sleep(2000);
@@ -100,20 +100,20 @@ describe('demoapp', function() {
     overnightDuffleBag.searchGirl("Girl");
     browser.actions().sendKeys(protractor.Key.ENTER).perform();
 
-    expect((element.all(by.xpath('//div[@class="message notice"]'))).getText()).toBe("Your search returned no results. ");
+    expect((element.all(by.xpath('//div[contains(text(),"Your search returned no results.")]'))).getText()).toContain("Your search returned no results.");
 
-    browser.sleep(2000);
+    browser.sleep(4000);
 
     search.clickOnCart();
 
-    browser.sleep(3000);
+    browser.sleep(4000);
 
     search.clickOnCheckout();
 
     browser.sleep(8000);
 
     expect(browser.getTitle()).toBe("Checkout Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
-    expect((element.all(by.xpath('//span[@data-bind="text: getCartSummaryItemsCount()"]'))).getText()).toBe("5");
+    expect((element.all(by.xpath('//span[@data-bind="text: getCartSummaryItemsCount()"]'))).getText()).toContain('5');
     checkout.fillEmail("adna.torlo@"+getRandomString(5)+".ba");
     checkout.fillFirstName("Adna");
     checkout.fillLastName("Torlo");
@@ -126,7 +126,7 @@ describe('demoapp', function() {
     checkout.clickShippingMethod();
     checkout.clickNext();
 
-    browser.sleep(3000);
+    browser.sleep(4000);
     
     expect(browser.getTitle()).toBe("Checkout Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites");
     placeOrder.clickPlaceOrder();
